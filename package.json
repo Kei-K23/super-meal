@@ -1,0 +1,19 @@
+{
+  "name": "supermeal",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --port 9090"
+  },
+  "devDependencies": {
+    "vite": "^4.3.9"
+  },
+  "dependencies": {
+    "aos": "^2.3.4",
+    "axios": "^1.4.0",
+    "swiper": "^9.4.1"
+  }
+}

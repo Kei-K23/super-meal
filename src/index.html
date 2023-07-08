@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/20bc52809b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="style.css" />
+    <title>superMeal</title>
+  </head>
+  <body>
+    <!-- header section -->
+    <header>
+      <nav>
+        <div class="main__icon">
+          <a href="index.html">superMeal🍛</a>
+        </div>
+
+        <div class="hamburger-menu">
+          <input id="menu__toggle" type="checkbox" />
+          <label class="menu__btn" for="menu__toggle">
+            <span></span>
+          </label>
+
+          <ul class="menu__box">
+            <li>
+              <a class="menu__item" href="index.html"
+                ><i class="fa-solid fa-house"></i> Home</a
+              >
+            </li>
+            <li>
+              <a class="menu__item" href="./aboutUs/aboutUs.html"
+                ><i class="fa-solid fa-users"></i> About us</a
+              >
+            </li>
+            <li>
+              <a class="menu__item" href="./contactUs/contactUs.html"
+                ><i class="fa-solid fa-envelope"></i> Contact us</a
+              >
+            </li>
+
+            <li title="Follow Me on GitHub">
+              <a
+                class="menu__item"
+                href="https://github.com/Kei-K23"
+                target="_blank"
+                ><i class="fa-brands fa-github githubProfile"></i> Follow me</a
+              >
+            </li>
+          </ul>
+        </div>
+        <ul class="links__container">
+          <li>
+            <a class="active" href="index.html"
+              ><i class="fa-solid fa-house"></i> Home</a
+            >
+          </li>
+          <li>
+            <a href="./aboutUs/aboutUs.html"
+              ><i class="fa-solid fa-users"></i> About us</a
+            >
+          </li>
+          <li>
+            <a href="./contactUs/contactUs.html"
+              ><i class="fa-solid fa-envelope"></i> Contact us</a
+            >
+          </li>
+          <li title="Follow Me on GitHub">
+            <a href="https://github.com/Kei-K23" target="_blank"
+              ><i class="fa-brands fa-github githubProfile"></i
+            ></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="main__section_container">
+      <!-- search bar section -->
+      <section class="search__container">
+        <form
+          title="search..."
+          id="searchSubmitForm"
+          class="search__container_div"
+        >
+          <input
+            type="text"
+            id="inputMeal"
+            placeholder="Search delicious meals..."
+          />
+          <button class="submitBtn" type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
+        <p class="search__info">
+          Search your delicious meals (e.g fish, chicken, cake, etc.. )
+        </p>
+      </section>
+
+      <div class="fav_hamburger_menu">
+        <i
+          title="favourite meals"
+          class="fa-solid fa-heart favContainerBtn"
+        ></i>
+
+        <div data-hide="hide" class="favMenu__box">
+          <div class="favContainer">
+            <h2 class="favContainer__header">Favourite Meal 🍕</h2>
+            <ul class="favMealLiContainer"></ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- main food grid section -->
+      <section class="main__container">
+        <h1 class="main__header">Random Meals 🍥</h1>
+        <ul id="meal__container"></ul>
+        <!-- load more food btn -->
+
+        <button id="loadMoreBtn">More Meals</button>
+      </section>
+
+      <section class="search_result__container">
+        <div class="search__info_container">
+          <h1 class="search__header"></h1>
+          <h1 class="alertNotFoundMeal"></h1>
+          <h2 class="alertNotFoundMealAgain"></h2>
+        </div>
+        <ul id="search_meal__container"></ul>
+        <button id="randomBtn">
+          <a href="index.html">Random Meals</a>
+        </button>
+      </section>
+      <!-- dialog for each specific food -->
+      <section class="modal__section__container"></section>
+    </section>
+
+    <!-- footer -->
+    <footer>
+      <div class="footer__top_container">
+        <div class="footer__icon">
+          <a href="index.html">superMeal🍛</a>
+        </div>
+        <div>
+          <p class="footer__nav_links_header">Navigation links</p>
+          <ul class="footer_links__container">
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+              <a href="./aboutUs/aboutUs.html">About us</a>
+            </li>
+            <li>
+              <a href="./contactUs/contactUs.html">Contact us</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="footer__social_links_header">Social Media</p>
+          <ul class="footer_links__container">
+            <li>
+              <a href="#"><i class="fa-brands fa-facebook"></i> Facebook</a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-twitter"></i> Twitter</a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom_container">
+        <p class="footer__1">
+          &copy; 2023 superMeal@Kei-K. All rights reserved.
+        </p>
+        <p class="footer__2">
+          Create with &#128153; by
+          <a href="https://github.com/Kei-K23" target="_blank"
+            ><i class="fa-brands fa-github"></i> Kei-K</a
+          >
+        </p>
+      </div>
+    </footer>
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>

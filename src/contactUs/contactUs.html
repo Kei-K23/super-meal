@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/20bc52809b.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="contactUs.css" />
+    <title>superMeal</title>
+  </head>
+
+  <body>
+    <!-- header section -->
+    <header>
+      <nav>
+        <div class="main__icon">
+          <a href="../index.html">superMeal🍛</a>
+        </div>
+
+        <div class="hamburger-menu">
+          <input id="menu__toggle" type="checkbox" />
+          <label class="menu__btn" for="menu__toggle">
+            <span></span>
+          </label>
+
+          <ul class="menu__box">
+            <li>
+              <a class="menu__item" href="../index.html"
+                ><i class="fa-solid fa-house"></i> Home</a
+              >
+            </li>
+            <li>
+              <a class="menu__item" href="../aboutUs/aboutUs.html"
+                ><i class="fa-solid fa-users"></i> About us</a
+              >
+            </li>
+            <li>
+              <a class="menu__item" href="contactUs.html"
+                ><i class="fa-solid fa-envelope"></i> Contact us</a
+              >
+            </li>
+            <li title="Follow Me on GitHub">
+              <a
+                class="menu__item"
+                href="https://github.com/Kei-K23"
+                target="_blank"
+                ><i class="fa-brands fa-github githubProfile"></i> Follow me</a
+              >
+            </li>
+          </ul>
+        </div>
+        <ul class="links__container">
+          <li>
+            <a href="../index.html">Home</a>
+          </li>
+          <li>
+            <a href="../aboutUs/aboutUs.html">About us</a>
+          </li>
+          <li>
+            <a class="active" href="contactUs.html">Contact us</a>
+          </li>
+          <li title="Follow Me on GitHub">
+            <a href="https://github.com/Kei-K23" target="_blank"
+              ><i class="fa-brands fa-github githubProfile"></i
+            ></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="emailDialogInfo">
+      <h2 class="messageInfo"></h2>
+    </div>
+
+    <section class="submitForm__container">
+      <h1 class="contactUs__header">Contact Us 📨</h1>
+      <form class="form">
+        <div class="formInput">
+          <h2>Enter your full name?</h2>
+          <input
+            type="text"
+            required
+            id="inputName"
+            placeholder="Enter your full name?"
+          />
+        </div>
+        <div class="formInput">
+          <h2>Enter your email?</h2>
+          <input
+            type="text"
+            required
+            id="inputEmail"
+            placeholder="Enter your email?"
+          />
+        </div>
+        <div class="formInput">
+          <h2>Subject</h2>
+          <input
+            type="text"
+            required
+            id="inputSubject"
+            placeholder="Subject..."
+          />
+        </div>
+        <div class="formInput">
+          <h2>Message</h2>
+          <textarea id="inputText" required placeholder="Message..."></textarea>
+        </div>
+        <button class="formSubmitBtn" type="submit">Submit</button>
+      </form>
+    </section>
+
+    <!-- footer -->
+    <footer>
+      <div class="footer__top_container">
+        <div class="footer__icon">
+          <a href="../index.html">superMeal🍛</a>
+        </div>
+        <div>
+          <p class="footer__nav_links_header">Navigation links</p>
+          <ul class="footer_links__container">
+            <li>
+              <a href="../index.html">Home</a>
+            </li>
+            <li>
+              <a href="../aboutUs/aboutUs.html">About us</a>
+            </li>
+            <li>
+              <a href="contactUs.html">Contact us</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="footer__social_links_header">Social Media</p>
+          <ul class="footer_links__container">
+            <li>
+              <a href="#"><i class="fa-brands fa-facebook"></i> Facebook</a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-twitter"></i> Twitter</a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom_container">
+        <p class="footer__1">
+          &copy; 2023 superMeal@Kei-K. All rights reserved.
+        </p>
+        <p class="footer__2">
+          Create with &#128153; by
+          <a href="https://github.com/Kei-K23" target="_blank"
+            ><i class="fa-brands fa-github"></i> Kei-K</a
+          >
+        </p>
+      </div>
+    </footer>
+    <script type="module" src="contactUs.js"></script>
+  </body>
+</html>

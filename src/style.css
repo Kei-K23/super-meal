@@ -1,0 +1,1195 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Nunito', sans-serif;
+}
+
+:root {
+
+    /* for mobile device */
+    --font-mLogo: 30px;
+    --font-mLarge: 25px;
+    --font-mMedium: 20px;
+    --font-mSmall: 16px;
+    --button-m: 22px;
+
+    /* for tablet device */
+    --font-tLogo: 35px;
+    --nav-tItems: 30px;
+    --font-tLarge: 35px;
+    --font-tMedium: 25px;
+    --font-tSmall: 20px;
+    --button-t: 23px;
+
+    /* for large and medium screen */
+    --header-l: 45px;
+
+    --font-l: 25px;
+    --font-m: 21px;
+    --font-s: 17px;
+
+    --line-h: 2rem;
+    /* for small screen */
+    --font-ls: 18px;
+    --font-ms: 16px;
+    --font-ss: 14px;
+
+    /* border */
+    --border-navAndFooter: 2px solid black;
+    --border-btnAndSearch: 3px solid black;
+    --border-food: 4px solid black;
+
+    /* transition  */
+    --tran--animation: all ease-in 0.2s;
+}
+
+
+/* main error section */
+
+.errorMessage {
+    font-size: var(--font-lLarge);
+    color: red;
+    text-align: center;
+    margin-top: 30px;
+
+}
+
+.refreshBtn {
+    padding: 10px 20px;
+    display: block;
+    font-size: var(--button-l);
+    margin: 50px auto;
+    cursor: pointer;
+}
+
+/* nav bar */
+header {
+    position: relative;
+    position: sticky;
+    background-color: #aaa;
+    top: 0;
+    z-index: 100;
+    transition: var(--tran--animation);
+}
+
+.headerChangeTheme {
+    background-color: #fff;
+    border-bottom: var(--border-navAndFooter);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+.githubProfile {
+    font-size: var(--font-l);
+
+}
+
+.links__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.links__container a {
+    font-size: var(--font-m);
+    color: #000;
+    font-weight: 600;
+    transition: var(--tran--animation);
+}
+
+.links__container a:hover {
+    color: #444;
+    text-decoration: underline;
+}
+
+.links__container a.active {
+    color: #444;
+    text-decoration: underline;
+}
+
+.main__icon {
+    font-size: 34px;
+    font-weight: 700;
+}
+
+
+.main__icon a {
+    color: #000;
+}
+
+
+/* main__section_container */
+
+.main__section_container {
+    min-height: 100vh;
+}
+
+/* search bar for meals */
+.search__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: var(--border-navAndFooter);
+    width: 75%;
+    margin: 50px auto 40px;
+}
+
+.search__container_div {
+    display: flex;
+    align-items: center;
+    border: var(--border-btnAndSearch);
+    border-radius: 5px;
+}
+
+#inputMeal {
+    padding: 8px 15px;
+    font-size: var(--font-m);
+    background-color: inherit;
+    letter-spacing: 2px;
+    border: none;
+    outline: none;
+}
+
+.search__container_div i {
+    font-size: var(--font-l);
+}
+
+.submitBtn {
+    background-color: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.search__info {
+    margin-top: 10px;
+    font-size: var(--font-s);
+    color: #444;
+    font-weight: 500;
+    margin: 17px 0px;
+}
+
+/* main container section */
+#meal__container,
+#search_meal__container {
+    display: grid;
+    width: 75%;
+    margin: 0 auto;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: minmax(370px);
+    gap: 30px;
+}
+
+.main__header,
+.search__header {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: var(--font-l);
+}
+
+.meal {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border: var(--border-food);
+    border-radius: 10px;
+    background-color: #ccc;
+    cursor: pointer;
+    user-select: none;
+}
+
+.img {
+    width: 100%;
+    height: 270px;
+}
+
+.mealMainInfoEle {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    margin: 20px 0 30px;
+    padding: 0px 15px;
+}
+
+.mealNameEle {
+    font-size: var(--font-l);
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.mealCateEle {
+    font-size: var(--font-m);
+    color: #444;
+    font-weight: 600;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 0;
+    height: 0;
+    position: absolute;
+    overflow: hidden;
+}
+
+label {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    color: #fff;
+    font-size: 27px;
+}
+
+input[type="checkbox"]:checked+label {
+    color: red;
+}
+
+.alertNotFoundMeal {
+    text-align: center;
+    color: red;
+    font-size: 35px;
+}
+
+.alertNotFoundMealAgain {
+    text-align: center;
+    margin-top: 10px;
+    color: #444;
+}
+
+/* more loading btn */
+#loadMoreBtn,
+#randomBtn {
+    display: block;
+    margin: 40px auto;
+    padding: 10px 15px;
+    font-size: var(--font-m);
+    font-weight: 600;
+    border: 3px solid black;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: var(--tran--animation);
+}
+
+
+#loadMoreBtn:hover,
+#randomBtn:hover {
+    background-color: #ccc;
+}
+
+
+#randomBtn a {
+    color: black;
+}
+
+/* search_result__container */
+.search_result__container {
+    display: none;
+}
+
+/* modal dialog  */
+
+dialog {
+    margin: 50px auto 0px;
+    width: 70%;
+    height: 80%;
+    border: var(--border-food);
+    border-radius: 10px;
+}
+
+.closeIcon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 35px;
+    cursor: pointer;
+    transition: var(--tran--animation);
+}
+
+.closeIcon:hover {
+    color: #f00;
+}
+
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.specific__mealImg {
+    display: block;
+    width: 50%;
+    height: 60%;
+    margin: 50px auto 0px;
+}
+
+.specific__mealName {
+    margin: 20px 0;
+    text-align: center;
+    font-size: 30px;
+}
+
+.labelForTags {
+    color: #000;
+    font-size: 20px;
+}
+
+.specific__mealInfo_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.specific__mealInfo {
+    padding: 8px 13px;
+    font-size: var(--font-s);
+    font-weight: 600;
+    border: var(--border-btnAndSearch);
+    border-radius: 35px;
+    cursor: pointer;
+    transition: var(--tran--animation);
+}
+
+.specific__mealInfo:hover {
+    background-color: #ccc;
+    color: #444;
+}
+
+
+.instructionLabel {
+    text-align: center;
+    font-size: var(--font-m);
+    font-weight: 600;
+}
+
+.specific__mealInstruction {
+    font-size: var(--font-m);
+    margin: 20px 80px 40px;
+    line-height: var(--line-h);
+}
+
+.youTubeLink {
+    margin: 20px;
+    display: block;
+    text-align: center;
+    font-size: var(--font-s);
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+/* modal dialog table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px auto;
+    font-size: var(--font-m);
+}
+
+th,
+td {
+    height: 50px;
+    text-align: left;
+    padding-left: 20px;
+}
+
+th {
+    background-color: steelblue;
+    color: #fff;
+}
+
+tr:nth-child(even) {
+    background-color: #ccc;
+}
+
+/* footer */
+
+footer {
+    width: 100%;
+    background-color: #000;
+    color: #eee;
+    margin-top: 100px;
+    padding: 20px;
+}
+
+.footer__top_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 20px auto 30px;
+}
+
+.footer__icon {
+    font-size: 34px;
+    font-weight: 700;
+}
+
+.footer__icon a {
+    color: steelblue;
+}
+
+.footer__nav_links_header,
+.footer__social_links_header {
+    font-size: var(--font-m);
+    margin-bottom: 15px;
+}
+
+.footer_links__container {
+    font-size: var(--font-m);
+}
+
+.footer_links__container li a {
+    color: #eee;
+}
+
+.footer_links__container li a:hover {
+    color: #f00;
+}
+
+.footer__bottom_container {
+    border-top: 2px solid #eee;
+    padding: 20px 0px;
+    font-size: var(--font-m);
+}
+
+.footer__2 {
+    margin-top: 20px;
+}
+
+.footer__2 a {
+    color: #000;
+    background-color: #eee;
+    padding: 5px 10px;
+    border-radius: 10px;
+    transition: var(--tran--animation);
+}
+
+.footer__2 a:hover {
+    color: #222;
+    background-color: #ccc;
+}
+
+/* fav container */
+
+.favContainer {
+    width: 350px;
+    height: 350px;
+    background-color: #aaa;
+    border: var(--border-navAndFooter);
+    padding: 10px 20px;
+    overflow: auto;
+}
+
+.favContainer__header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.favMealLi {
+    position: relative;
+    margin: 10px 0px;
+    padding-bottom: 20px;
+    border-bottom: var(--border-navAndFooter);
+    cursor: pointer;
+}
+
+.hideDiv {
+    position: absolute;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+}
+
+.controlBtn {
+    display: block;
+    margin: 13px auto;
+    width: 90px;
+    padding: 8px 12px;
+    font-size: var(--font-ss);
+    cursor: pointer;
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    transition: var(--tran--animation);
+}
+
+.controlIcon {
+    margin-left: 5px;
+}
+
+.viewBtn {
+    background-color: #4682B4;
+}
+
+.deleteBtn {
+    background-color: rgb(255, 100, 100);
+}
+
+.viewBtn:hover {
+    background-color: #366b97;
+}
+
+.deleteBtn:hover {
+    background-color: rgb(226, 74, 74);
+}
+
+.favMealLiDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.favMealLiImg {
+    width: 100px;
+    height: 100px;
+}
+
+.favMealLih2 {
+    font-size: var(--font-s);
+}
+
+
+.favContainerBtn {
+    font-size: var(--font-lMedium);
+    background-color: #ccc;
+    color: red;
+    padding: 10px 15px;
+    position: fixed;
+    top: 100px;
+    left: 0;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.favContainerBtn {
+    font-size: var(--font-lMedium);
+    background-color: #ccc;
+    color: red;
+    padding: 10px 15px;
+    position: fixed;
+    top: 100px;
+    left: 0;
+    cursor: pointer;
+    z-index: 1;
+    transition: all ease-in-out 0.5s;
+}
+
+.favContainerBtn:hover {
+    padding-right: 40px;
+}
+
+.favMenu__box {
+    display: block;
+    position: fixed;
+    top: 20%;
+    left: -100%;
+    margin: 0;
+    transition-duration: .25s;
+    z-index: 100;
+}
+
+
+
+/* hamburger menu */
+
+#menu__toggle {
+    opacity: 0;
+}
+
+#menu__toggle:checked+.menu__btn>span {
+    transform: rotate(45deg);
+}
+
+#menu__toggle:checked+.menu__btn>span::before {
+    top: 0;
+    transform: rotate(0deg);
+}
+
+#menu__toggle:checked+.menu__btn>span::after {
+    top: 0;
+    transform: rotate(90deg);
+}
+
+#menu__toggle:checked~.menu__box {
+    right: 0 !important;
+}
+
+.menu__btn {
+    top: 20px;
+    left: 20px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
+    display: none;
+}
+
+.menu__btn>span,
+.menu__btn>span::before,
+.menu__btn>span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #000;
+    transition-duration: .25s;
+}
+
+.menu__btn>span::before {
+    content: '';
+    top: -8px;
+}
+
+.menu__btn>span::after {
+    content: '';
+    top: 8px;
+}
+
+.menu__box {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100%;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    background-color: #ECEFF1;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+    transition-duration: .25s;
+}
+
+.menu__item {
+    display: block;
+    padding: 12px 24px;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    transition-duration: .25s;
+}
+
+.menu__item:hover {
+    background-color: #CFD8DC;
+}
+
+
+/* Mobile (0 to 450px) */
+@media (max-width: 450px) {
+    .main__icon {
+        font-size: var(--font-mLogo);
+    }
+
+    .search__container {
+        width: 80%;
+        font-size: var(--font-mMedium);
+    }
+
+    .search__info {
+        font-size: var(--font-mSmall);
+    }
+
+
+    /* main container section */
+    #meal__container,
+    #search_meal__container {
+        width: 75%;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .main__header,
+    .search__header {
+        font-size: var(--font-mLarge);
+    }
+
+    #loadMoreBtn,
+    #randomBtn {
+        font-size: var(--font-mMedium);
+    }
+
+    .menu__btn {
+        display: block;
+    }
+
+    .links__container {
+        display: none;
+    }
+
+    .footer__icon {
+        font-size: var(--font-mLogo);
+        margin-bottom: 20px;
+    }
+
+    /* footer  */
+    .footer__top_container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer__nav_links_header,
+    .footer__social_links_header {
+        font-size: var(--font-mMedium);
+        margin-top: 15px;
+    }
+
+    .footer_links__container {
+        font-size: var(--font-mSmall);
+    }
+
+    .footer__bottom_container {
+
+        font-size: var(--font-mSmall);
+    }
+
+    /* fav container  */
+
+    .favContainer {
+        width: 300px;
+        height: 300px;
+    }
+
+    .favContainerBtn {
+        font-size: var(--font-mLarge);
+        padding: 8px 9px;
+        top: 30%;
+        transform: translateY(-70%);
+        left: 0;
+    }
+
+    .favMenu__box {
+        top: 55%;
+        transform: translateY(-45%);
+        left: -100%;
+        margin: 0;
+        transition-duration: .25s;
+        z-index: 100;
+    }
+
+    .controlBtn {
+        font-size: var(--font-mSmall);
+    }
+
+    .favMealLiImg {
+        width: 80px;
+        height: 80px;
+    }
+
+    .favMealLih2 {
+        font-size: var(--font-mSmall);
+    }
+
+    .controlBtn {
+        font-size: var(--font-ss);
+    }
+
+
+    /* modal dialog  */
+
+
+    dialog {
+        margin: 20px auto 0px;
+        width: 90%;
+        height: 90%;
+    }
+
+    .specific__mealImg {
+        margin: 50px auto 0px;
+        width: 90%;
+        height: 40%;
+    }
+
+    .specific__mealName {
+        font-size: var(--font-mMedium);
+    }
+
+    .specific__mealInfo {
+        font-size: var(--font-mSmall);
+    }
+
+    .instructionLabel {
+        font-size: var(--font-mMedium);
+    }
+
+    .specific__mealInstruction {
+        margin: 20px 30px 40px;
+        font-size: var(--font-mMedium);
+    }
+
+    .youTubeLink {
+        font-size: var(--font-mSmall);
+    }
+
+    table {
+        font-size: var(--font-mMedium);
+    }
+
+}
+
+/* Tablet (450px to 768px) */
+@media (min-width: 451px) and (max-width: 768px) {
+
+    .main__icon {
+        font-size: var(--font-tLogo);
+    }
+
+    .search__container {
+        width: 80%;
+        font-size: var(--font-tMedium);
+    }
+
+    .search__info {
+        font-size: var(--font-tSmall);
+    }
+
+
+    /* main container section */
+    #meal__container,
+    #search_meal__container {
+        width: 70%;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .main__header,
+    .search__header {
+        font-size: var(--font-tLarge);
+    }
+
+    #loadMoreBtn,
+    #randomBtn {
+        font-size: var(--font-tMedium);
+    }
+
+    .menu__btn {
+        display: block;
+    }
+
+    .links__container {
+        display: none;
+    }
+
+    .footer__icon {
+        font-size: var(--font-tLogo);
+        margin-bottom: 20px;
+    }
+
+    /* footer  */
+    .footer__top_container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        /* margin: 20px auto 30px; */
+    }
+
+    .footer__nav_links_header,
+    .footer__social_links_header {
+        font-size: var(--font-tMedium);
+        margin-top: 15px;
+    }
+
+    .footer_links__container {
+        font-size: var(--font-tSmall);
+    }
+
+    .footer__bottom_container {
+
+        font-size: var(--font-tSmall);
+    }
+
+    /* fav container  */
+
+    .favContainer {
+        width: 350px;
+        height: 350px;
+    }
+
+    .favContainerBtn {
+        font-size: var(--font-mLarge);
+        padding: 8px 9px;
+        top: 25%;
+        transform: translateY(-75%);
+        left: 0;
+    }
+
+    .favMenu__box {
+        top: 50%;
+        transform: translateY(-50%);
+        left: -100%;
+        margin: 0;
+        transition-duration: .25s;
+        z-index: 100;
+    }
+
+    .controlBtn {
+        font-size: var(--font-mSmall);
+    }
+
+    .favMealLiImg {
+        width: 80px;
+        height: 80px;
+    }
+
+    .favMealLih2 {
+        font-size: var(--font-mSmall);
+    }
+
+
+    .controlBtn {
+        font-size: var(--font-ss);
+    }
+
+    /* modal dialog  */
+
+
+    dialog {
+        margin: 30px auto 0px;
+        width: 90%;
+        height: 90%;
+    }
+
+
+    .specific__mealImg {
+        margin: 50px auto 0px;
+        width: 90%;
+        height: 40%;
+    }
+
+    .specific__mealName {
+        font-size: var(--font-mMedium);
+    }
+
+    .specific__mealInfo {
+        font-size: var(--font-mSmall);
+    }
+
+    .instructionLabel {
+        font-size: var(--font-mMedium);
+    }
+
+    .specific__mealInstruction {
+        margin: 20px 30px 40px;
+        font-size: var(--font-mMedium);
+    }
+
+    .youTubeLink {
+        font-size: var(--font-mSmall);
+    }
+
+    table {
+
+        font-size: var(--font-mMedium);
+    }
+}
+
+
+/* @media (min-width: 600px) and (max-width: 768px) {} */
+
+/* Laptop (768px to 1400px) */
+@media (min-width: 769px) and (max-width: 1400px) {
+
+    #meal__container,
+    #search_meal__container {
+        width: 60%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .menu__btn {
+        display: none;
+    }
+
+    .links__container {
+        display: flex;
+    }
+
+
+    .main__icon {
+        font-size: var(--font-tLogo);
+    }
+
+    .search__container {
+        width: 80%;
+        font-size: var(--font-tMedium);
+    }
+
+    .search__info {
+        font-size: var(--font-tSmall);
+    }
+
+
+    /* main container section */
+
+    .main__header,
+    .search__header {
+        font-size: var(--font-tLarge);
+    }
+
+    #loadMoreBtn,
+    #randomBtn {
+        font-size: var(--font-tMedium);
+    }
+
+
+    .footer__icon {
+        font-size: var(--font-tLogo);
+        margin-bottom: 20px;
+    }
+
+    /* footer  */
+    .footer__top_container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        /* margin: 20px auto 30px; */
+    }
+
+    .footer__nav_links_header,
+    .footer__social_links_header {
+        font-size: var(--font-tMedium);
+        margin-top: 15px;
+    }
+
+    .footer_links__container {
+        font-size: var(--font-tSmall);
+    }
+
+    .footer__bottom_container {
+
+        font-size: var(--font-tSmall);
+    }
+
+    /* fav container  */
+
+    .favContainer {
+        width: 350px;
+        height: 350px;
+    }
+
+    .favContainerBtn {
+        font-size: var(--font-mLarge);
+        padding: 8px 9px;
+        top: 25%;
+        transform: translateY(-75%);
+        left: 0;
+    }
+
+    .favMenu__box {
+        top: 50%;
+        transform: translateY(-50%);
+        left: -100%;
+        margin: 0;
+        transition-duration: .25s;
+        z-index: 100;
+    }
+
+    .controlBtn {
+        font-size: var(--font-mSmall);
+    }
+
+    .favMealLiImg {
+        width: 80px;
+        height: 80px;
+    }
+
+    .favMealLih2 {
+        font-size: var(--font-mSmall);
+    }
+
+
+    .controlBtn {
+        font-size: var(--font-ss);
+    }
+
+    /* modal dialog  */
+
+
+    dialog {
+        margin: 30px auto 0px;
+        width: 90%;
+        height: 90%;
+    }
+
+
+    .specific__mealImg {
+        margin: 50px auto 0px;
+        width: 90%;
+        height: 40%;
+    }
+
+    .specific__mealName {
+        font-size: var(--font-mMedium);
+    }
+
+    .specific__mealInfo {
+        font-size: var(--font-mSmall);
+    }
+
+    .instructionLabel {
+        font-size: var(--font-mMedium);
+    }
+
+    .specific__mealInstruction {
+        margin: 20px 30px 40px;
+        font-size: var(--font-mMedium);
+    }
+
+    .youTubeLink {
+        font-size: var(--font-mSmall);
+    }
+
+    table {
+
+        font-size: var(--font-mMedium);
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1100px) {
+
+    #meal__container,
+    #search_meal__container {
+        width: 80%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop (1500px and above) */
+@media (min-width: 1500px) {
+    .favContainer {
+        width: 400px;
+        height: 350px;
+    }
+
+    .menu__btn {
+        display: none;
+    }
+
+    .links__container {
+        display: flex;
+    }
+}

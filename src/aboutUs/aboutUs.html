@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/20bc52809b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./aboutUs.css" />
+    <title>superMeal</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="main__icon">
+          <a href="../index.html">superMeal🍛</a>
+        </div>
+
+        <div class="hamburger-menu">
+          <input id="menu__toggle" type="checkbox" />
+          <label class="menu__btn" for="menu__toggle">
+            <span></span>
+          </label>
+
+          <ul class="menu__box">
+            <li>
+              <a class="menu__item" href="../index.html"
+                ><i class="fa-solid fa-house"></i> Home</a
+              >
+            </li>
+            <li>
+              <a class="menu__item" href="aboutUs.html"
+                ><i class="fa-solid fa-users"></i> About us</a
+              >
+            </li>
+            <li>
+              <a class="menu__item" href="../contactUs/contactUs.html"
+                ><i class="fa-solid fa-envelope"></i> Contact us</a
+              >
+            </li>
+            <li title="Follow Me on GitHub">
+              <a
+                class="menu__item"
+                href="https://github.com/Kei-K23"
+                target="_blank"
+                ><i class="fa-brands fa-github githubProfile"></i> Follow me</a
+              >
+            </li>
+          </ul>
+        </div>
+        <ul class="links__container">
+          <li>
+            <a href="../index.html">Home</a>
+          </li>
+          <li>
+            <a class="active" href="aboutUs.html">About us</a>
+          </li>
+          <li>
+            <a href="../contactUs/contactUs.html">Contact us</a>
+          </li>
+          <li title="Follow Me on GitHub">
+            <a href="https://github.com/Kei-K23" target="_blank"
+              ><i class="fa-brands fa-github githubProfile"></i
+            ></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section class="content__container">
+      <h1 class="content__main_header">superMeal</h1>
+      <p class="content__main_intro">
+        <a class="linkLabel" href="../index.html">superMeal</a> website is
+        designed to allow users to search for delicious meals and view random
+        meal suggestions. It fetches data from the
+        <a class="linkLabel" href="https://themealdb.com/" target="_blank"
+          >TheMealDB</a
+        >
+        API to retrieve meal information and display it to the user. The main
+        purpose for creating this website was only for hobby, joy and want to
+        give some help for everybody. I'm deeply hoping that everyone will be
+        enjoy browsing through the website.
+      </p>
+
+      <div class="lan__container">
+        <h1 class="content__title">Languages Used 🤖</h1>
+
+        <div class="content__body_imgs">
+          <a
+            data-aos="zoom-in-right"
+            href="https://it.wikipedia.org/wiki/HTML5"
+            target="_blank"
+          >
+            <img class="lan_img" src="/html5.png" alt="HTML" title="HTML 5" />
+          </a>
+          <a
+            data-aos="zoom-out-up"
+            href="https://it.wikipedia.org/wiki/CSS"
+            target="_blank"
+          >
+            <img class="lan_img" src="/css3.png" alt="CSS" title="CSS 3" />
+          </a>
+          <a
+            data-aos="zoom-in-left"
+            href="https://it.wikipedia.org/wiki/JavaScript"
+            target="_blank"
+            ><img
+              class="lan_img"
+              src="/javascript.png"
+              alt="JS"
+              title="JavaScript"
+          /></a>
+        </div>
+      </div>
+
+      <h1 class="fea__content_title">Features 🔩</h1>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <h1 class="fea__header">Navigation</h1>
+            <p class="fea__body">
+              The website includes a navigation bar with links to the home page
+              and an "About Us" page.
+            </p>
+          </div>
+          <div class="swiper-slide">
+            <h1 class="fea__header">Search Bar</h1>
+            <p class="fea__body">
+              Users can enter a search query in the search bar to find meals
+              matching their query. When the search form is submitted, an API
+              request is made to retrieve meals with the specified name.
+            </p>
+          </div>
+          <div class="swiper-slide">
+            <h1 class="fea__header">Random Meals</h1>
+            <p class="fea__body">
+              The main section of the website displays a grid of random meals.
+              These meals are fetched from the meal API using an API endpoint.
+              Users can click the "More Meals..." button to load additional
+              random meals.
+            </p>
+          </div>
+          <div class="swiper-slide">
+            <h1 class="fea__header">Search Results</h1>
+            <p class="fea__body">
+              When a user submits a search query, the search results section is
+              displayed. It shows the meals that match the search query. If no
+              meals are found, appropriate error messages are shown.
+            </p>
+          </div>
+          <div class="swiper-slide">
+            <h1 class="fea__header">Meal Details</h1>
+            <p class="fea__body">
+              By double-clicking on a meal in either the random meals or search
+              results sections, a dialog box is opened, showing detailed
+              information about the selected meal. The dialog box includes the
+              meal's name, image, category, area, tags, ingredients, measures,
+              and instructions.
+            </p>
+          </div>
+          <div class="swiper-slide">
+            <h1 class="fea__header">Favourite Meals</h1>
+            <p class="fea__body">
+              If a user click on a heart icon, the meal will store in
+              localStorage API in browser. By doing so, users can save their
+              favourite meals and it won't delete even the browser. Users can
+              view and delete their favourite meals as they want.
+            </p>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+        <div class="autoplay-progress">
+          <svg viewBox="0 0 48 48">
+            <circle cx="24" cy="24" r="20"></circle>
+          </svg>
+          <span></span>
+        </div>
+      </div>
+
+      <div class="usage__container">
+        <h1 class="useage__header">Usages 📝</h1>
+        <p data-aos="zoom-in-left" class="usage">
+          Open the website in a web browser.
+        </p>
+        <p data-aos="zoom-in-left" class="usage">
+          Use the navigation links to explore different pages.
+        </p>
+        <p data-aos="zoom-in-left" class="usage">
+          Enter a meal name in the search bar and click the search button to
+          search for specific meals.
+        </p>
+        <p data-aos="zoom-in-left" class="usage">
+          Browse the random meals displayed on the main page.
+        </p>
+        <p data-aos="zoom-in-left" class="usage">
+          Double-click on a meal to view its detailed information in a dialog
+          box.
+        </p>
+        <p data-aos="zoom-in-left" class="usage">
+          Click the "More Meals..." button to load additional random meals.
+        </p>
+        <p data-aos="zoom-in-left" class="usage">
+          Enjoy searching and exploring delicious meals!
+        </p>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+      <div class="footer__top_container">
+        <div class="footer__icon">
+          <a href="../index.html">superMeal🍛</a>
+        </div>
+        <div>
+          <p class="footer__nav_links_header">Navigation links</p>
+          <ul class="footer_links__container">
+            <li>
+              <a href="../index.html">Home</a>
+            </li>
+            <li>
+              <a href="aboutUs.css">About us</a>
+            </li>
+            <li>
+              <a href="../contactUs/contactUs.html">Contact us</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="footer__social_links_header">Social Media</p>
+          <ul class="footer_links__container">
+            <li>
+              <a href="#"><i class="fa-brands fa-facebook"></i> Facebook</a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-twitter"></i> Twitter</a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom_container">
+        <p class="footer__1">
+          &copy; 2023 superMeal@Kei-K. All rights reserved.
+        </p>
+        <p class="footer__2">
+          Create with &#128153; by
+          <a href="https://github.com/Kei-K23" target="_blank"
+            ><i class="fa-brands fa-github"></i> Kei-K</a
+          >
+        </p>
+      </div>
+    </footer>
+    <script type="module" src="aboutUs.js"></script>
+  </body>
+</html>
