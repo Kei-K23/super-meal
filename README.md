@@ -2,7 +2,7 @@
 
 This project is a web application that allows users to search for meals and view their details. It utilizes the [MealDB API](https://www.themealdb.com/api.php) to fetch meal data.
 
-- visit to website https://supermeal-79083.firebaseapp.com/
+- visit to website https://supermeal-79083.web.app/
 
 ## Features
 
